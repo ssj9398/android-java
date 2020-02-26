@@ -1,0 +1,274 @@
+package com.alisyabob2.test2;
+
+import android.os.Bundle;
+import android.view.ViewGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import net.daum.mf.map.api.MapPOIItem;
+import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapView;
+
+public class map extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.map);
+
+        MapView mapView = new MapView(this);
+        mapView.setDaumMapApiKey("API KEY");
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        MapPoint mapPoint = MapPoint.mapPointWithGeoCoord(35.8175327, 128.7509654);
+        mapView.setMapCenterPoint(mapPoint, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+        mapViewContainer.addView(mapView);
+
+        MapPOIItem marker = new MapPOIItem();
+        marker.setItemName("1번 확진자 2월 18일 방문 미래연합");
+        marker.setTag(0);
+        marker.setMapPoint(mapPoint);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker);
+
+
+
+        MapPoint mapPoint2 = MapPoint.mapPointWithGeoCoord(35.824693, 128.743306);
+        mapView.setMapCenterPoint(mapPoint2, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker2 = new MapPOIItem();
+        marker2.setItemName("1,3 확진자 19일 방문 경산시보건소");
+        marker2.setTag(0);
+        marker2.setMapPoint(mapPoint2);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker2.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker2);
+
+        MapPoint mapPoint3 = MapPoint.mapPointWithGeoCoord(35.8130051, 128.7323841);
+        mapView.setMapCenterPoint(mapPoint3, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker3 = new MapPOIItem();
+        marker3.setItemName("2번 확진자 19일 방문 혜화연합의원");
+        marker3.setTag(0);
+        marker3.setMapPoint(mapPoint3);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker3.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker3);
+
+        MapPoint mapPoint4 = MapPoint.mapPointWithGeoCoord(35.812726, 128.732881);
+        mapView.setMapCenterPoint(mapPoint4, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker4 = new MapPOIItem();
+        marker4.setItemName("3번 확진자 16일 방문 우리횟집");
+        marker4.setTag(0);
+        marker4.setMapPoint(mapPoint4);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker4.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker4);
+
+        MapPoint mapPoint5 = MapPoint.mapPointWithGeoCoord(35.817001, 128.759678);
+        mapView.setMapCenterPoint(mapPoint5, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker5 = new MapPOIItem();
+        marker5.setItemName("4번 확진자 18일 경산세무서");
+        marker5.setTag(0);
+        marker5.setMapPoint(mapPoint5);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker5.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker5);
+
+        MapPoint mapPoint6 = MapPoint.mapPointWithGeoCoord(35.824893, 128.741525);
+        mapView.setMapCenterPoint(mapPoint6, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker6 = new MapPOIItem();
+        marker6.setItemName("4번 확진자 18일 경산시청");
+        marker6.setTag(0);
+        marker6.setMapPoint(mapPoint6);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker6.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker6);
+
+        MapPoint mapPoint7 = MapPoint.mapPointWithGeoCoord(35.829066, 128.736154);
+        mapView.setMapCenterPoint(mapPoint7, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker7 = new MapPOIItem();
+        marker7.setItemName("4번 확진자 18일 롤링핀 중방동");
+        marker7.setTag(0);
+        marker7.setMapPoint(mapPoint7);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker7.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker7);
+
+
+        MapPoint mapPoint8 = MapPoint.mapPointWithGeoCoord(35.825465, 128.737047);
+        mapView.setMapCenterPoint(mapPoint8, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker8 = new MapPOIItem();
+        marker8.setItemName("4번 확진자 18일 경대연합용한속내과");
+        marker8.setTag(0);
+        marker8.setMapPoint(mapPoint8);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker8.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker8);
+
+
+        MapPoint mapPoint9 = MapPoint.mapPointWithGeoCoord(35.824167, 128.737699);
+        mapView.setMapCenterPoint(mapPoint9, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker9 = new MapPOIItem();
+        marker9.setItemName("5번 확진자 17일 김동희속내과");
+        marker9.setTag(0);
+        marker9.setMapPoint(mapPoint9);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker9.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker9);
+
+
+        MapPoint mapPoint10 = MapPoint.mapPointWithGeoCoord(35.824090, 128.737660);
+        mapView.setMapCenterPoint(mapPoint10, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker10 = new MapPOIItem();
+        marker10.setItemName("5번 확진자 17일 새별약국");
+        marker10.setTag(0);
+        marker10.setMapPoint(mapPoint10);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker10.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker10);
+
+
+        MapPoint mapPoint11 = MapPoint.mapPointWithGeoCoord(35.826294, 128.738088);
+        mapView.setMapCenterPoint(mapPoint11, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker11 = new MapPOIItem();
+        marker11.setItemName("5번 확진자 17일 촌순두부청국장");
+        marker11.setTag(0);
+        marker11.setMapPoint(mapPoint11);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker11.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker11);
+
+
+        MapPoint mapPoint12 = MapPoint.mapPointWithGeoCoord(35.827653, 128.736920);
+        mapView.setMapCenterPoint(mapPoint12, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker12 = new MapPOIItem();
+        marker12.setItemName("5번 확진자 17일 스타벅스");
+        marker12.setTag(0);
+        marker12.setMapPoint(mapPoint12);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker12.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker12);
+
+
+        MapPoint mapPoint13 = MapPoint.mapPointWithGeoCoord(35.827901, 128.725862);
+        mapView.setMapCenterPoint(mapPoint13, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker13 = new MapPOIItem();
+        marker13.setItemName("6번 확진자 15일 청해수산");
+        marker13.setTag(0);
+        marker13.setMapPoint(mapPoint13);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker13.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker13);
+
+
+        MapPoint mapPoint14 = MapPoint.mapPointWithGeoCoord(35.834241, 128.729475);
+        mapView.setMapCenterPoint(mapPoint14, true);
+
+
+        //true면 앱 실행 시 애니메이션 효과가 나오고 false면 애니메이션이 나오지않음.
+
+
+        MapPOIItem marker14 = new MapPOIItem();
+        marker14.setItemName("6번 확진자 18일 펜타힐즈내과의원");
+        marker14.setTag(0);
+        marker14.setMapPoint(mapPoint14);
+        // 기본으로 제공하는 BluePin 마커 모양.
+        marker14.setMarkerType(MapPOIItem.MarkerType.BluePin);
+        // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker14);
+
+
+
+
+    }
+
+
+}
