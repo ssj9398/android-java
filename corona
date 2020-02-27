@@ -272,3 +272,35 @@ public class map extends AppCompatActivity {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(i=0; i<1000; i++){
+		mapView.setMapCenterPoint(mapPoint[i], true);
+        MapPOIItem marker[i] = new MapPOIItem();
+        marker[i].setTag(0);
+        marker[i].setMapPoint(mapPoint[i]);
+        marker[i].setMarkerType(MapPOIItem.MarkerType.BluePin);
+
+        marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+        mapView.addPOIItem(marker[i]);
+		}
+
+		marker[j].setItemName("1,3 확진자 19일 방문 경산시보건소");
+		MapPoint mapPoint[i] = MapPoint.mapPointWithGeoCoord(35.824693, 128.743306);
